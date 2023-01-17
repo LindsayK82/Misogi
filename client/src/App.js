@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -48,15 +49,15 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/" 
+                path="/"
                 element={<Home />}
               />
               <Route 
-                path="/login"
+                path="/login" 
                 element={<Login />}
               />
               <Route 
-                path="/signup"
+                path="/signup" 
                 element={<Signup />}
               />
               <Route 
@@ -66,7 +67,11 @@ function App() {
               <Route 
                 path="/profiles/:username" 
                 element={<Profile />}
-              />              
+              />
+              <Route 
+                path="/thoughts/:thoughtId" 
+                element={<SingleThought />}
+              />
             </Routes>
           </div>
           <Footer />
