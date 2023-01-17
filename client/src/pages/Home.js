@@ -2,8 +2,7 @@ import React from 'react';
 import ChildHoldingPlasticBottle from '../assets/images/childHoldingPlasticBottle.png'
 
 
-const Home = () => {
-  
+const Home = () => {  
 
   return (
     <main>

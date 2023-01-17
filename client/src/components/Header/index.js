@@ -29,13 +29,25 @@ const Header = () => {
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
+              </Link>              
+              <Link className="btn btn-lg btn-light m-2" to="/discover-events">
+                Discover Events
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/discover-styles">
+                Discover Styles
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/how-its-made">
+                How it's Made
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/about-us">
+                About Us
               </Link>
             </>
           )}
         </div>
         <div>
           <Link className="text-light" to="/">
-            <img src={logoImage} style={{ width: "50%" }} alt="misogi logo" />
+            <img src={logoImage} style={{ width: "20%" }} alt="misogi logo" />
           </Link>          
         </div>
       </div>
