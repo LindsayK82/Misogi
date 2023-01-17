@@ -1,13 +1,13 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+import ThoughtList from '../components/EventList';
+import ThoughtForm from '../components/EventForm';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_EVENTS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const { loading, data } = useQuery(QUERY_EVENTS);
   const thoughts = data?.thoughts || [];
 
   return (
