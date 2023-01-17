@@ -16,17 +16,9 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the Tech Thoughts team.
+        Misogi©
         </h4>
+        <p className="m-0 text-danger">Make one hard decision today to make tomorrow better.</p>
       </div>
     </footer>
   );

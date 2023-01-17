@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '../../assets/images/misogiLogo.png'
 
 import Auth from '../../utils/auth';
 
@@ -13,9 +14,8 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Tech Thoughts</h1>
-          </Link>
-          <p className="m-0">Get into the mind of a programmer.</p>
+            <img src={logoImage} style={{ width: "50%" }} alt="misogi logo" />
+          </Link>          
         </div>
         <div>
           {Auth.loggedIn() ? (
