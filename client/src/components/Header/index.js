@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../../assets/images/misogiLogo.png'
+import logoImage from '../../assets/images/homepage/misogiLogo.png'
 
 import Auth from '../../utils/auth';
 
@@ -15,31 +15,31 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
+              <Link className="btn btn-md btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="btn btn-md btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="btn btn-md btn-info m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-md btn-light m-2" to="/signup">
                 Signup
               </Link>              
-              <Link className="btn btn-lg btn-light m-2" to="/discover-events">
+              <Link className="btn btn-md btn-light m-2" to="/discover-events">
                 Discover Events
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/discover-styles">
+              <Link className="btn btn-md btn-light m-2" to="/discover-styles">
                 Discover Styles
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/how-its-made">
+              <Link className="btn btn-md btn-light m-2" to="/how-its-made">
                 How it's Made
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/about-us">
+              <Link className="btn btn-md btn-light m-2" to="/about-us">
                 About Us
               </Link>
             </>

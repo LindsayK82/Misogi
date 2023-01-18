@@ -13,6 +13,8 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
+import HowItsMade from './pages/HowItsMade';
+import AboutUs from './pages/AboutUs';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -58,6 +60,14 @@ function App() {
               <Route 
                 path="/me" 
                 element={<Profile />}
+              />
+              <Route 
+                path="/how-its-made" 
+                element={<HowItsMade />}
+              />
+              <Route 
+                path="/about-us" 
+                element={<AboutUs />}
               />
               <Route 
                 path="/profiles/:username" 
