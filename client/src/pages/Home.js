@@ -2,14 +2,17 @@ import React from 'react';
 import ChildHoldingPlasticBottle from '../assets/images/homepage/childHoldingPlasticBottle.png'
 import OceanPlastic from '../assets/images/homepage/oceanPlastics.png'
 import Redwoods from '../assets/images/homepage/redwood.png'
+import Carousels from '../components/Home/Carousel';
 
 
 const Home = () => {
 
   return (
     <main>
+      <Carousels />
       <div className='row'>
         <div className='col-md-6'>
+        
           <img src={ChildHoldingPlasticBottle} style={{ width: "100%" }} alt="misogi logo" />
         </div>
         <div className='col-md-6'>
