@@ -1,35 +1,18 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import ChildHoldingPlasticBottle from '../assets/images/childHoldingPlasticBottle.png'
 
-import ThoughtList from '../components/EventList';
-import ThoughtForm from '../components/EventForm';
-
-import { QUERY_EVENTS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_EVENTS);
-  const thoughts = data?.thoughts || [];
+  
 
   return (
     <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          <ThoughtForm />
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
-        </div>
+      <div>
+        <h4>Fast fashion is the second biggest source of environmental pollution on Earth. 
+          According to a study, nearly 20 to 25% of waste is created by the fashion industry alone, combined with the plastic industry, this waste percentage reaches up to shocking levels. 
+          We all are well aware of the fact that plastic is a non-biodegradable material that we are seeing take over our oceans, beaches - well the whole world!</h4>
       </div>
+      <img src={ChildHoldingPlasticBottle} style={{ width: "100%" }} alt="misogi logo" />
     </main>
   );
 };
