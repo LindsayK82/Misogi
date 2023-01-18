@@ -17,6 +17,7 @@ import HowItsMade from './pages/HowItsMade';
 import AboutUs from './pages/AboutUs';
 import DiscoverEvents from './pages/DiscoverEvents';
 import DiscoverStyles from './pages/DiscoverStyles';
+import RegisterEvents from './pages/RegisterEvents';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -82,6 +83,10 @@ function App() {
               <Route 
                 path="/profiles/:username" 
                 element={<Profile />}
+              />  
+              <Route 
+                path="/register-events" 
+                element={<RegisterEvents />}
               />              
             </Routes>
           </div>
