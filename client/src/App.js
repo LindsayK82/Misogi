@@ -81,8 +81,7 @@ function App() {
               <Route 
                 path="/profiles/:username" 
                 element={<Profile />}
-              />
-              
+              />              
             </Routes>
           </div>
           <Footer />
