@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Import the `useParams()` hook
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
@@ -9,13 +8,11 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_SINGLE_EVENT } from '../utils/queries';
 
-const SingleEvent = () => {
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const { eventId } = useParams();
+const SingleThought = () => {
+  const { thoughtId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLE_EVENT, {
-    // pass URL parameter
-    variables: { eventId: eventId },
+  const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
+    variables: { thoughtId: thoughtId },
   });
 
   const event = data?.event || {};
