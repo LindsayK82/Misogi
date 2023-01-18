@@ -11,6 +11,8 @@ const AboutUs = () => {
             <div className='row'>
                 <div className='col-md-6'>
                     <h2>About Us</h2>
+                    <br/>
+                    <p></p>
                 </div>
                 <div className='col-md-6'>
                     <img src={TurtleAndOcean} style={{ width: "100%" }} alt="turtle swimming in ocean with plastic bag" />
