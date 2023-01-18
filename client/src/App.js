@@ -15,6 +15,8 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import HowItsMade from './pages/HowItsMade';
 import AboutUs from './pages/AboutUs';
+import DiscoverEvents from './pages/DiscoverEvents';
+import DiscoverStyles from './pages/DiscoverStyles';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -64,6 +66,14 @@ function App() {
               <Route 
                 path="/how-its-made" 
                 element={<HowItsMade />}
+              />
+              <Route 
+                path="/discover-events" 
+                element={<DiscoverEvents />}
+              />
+               <Route 
+                path="/discover-styles" 
+                element={<DiscoverStyles />}
               />
               <Route 
                 path="/about-us" 
