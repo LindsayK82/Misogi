@@ -426,7 +426,7 @@ a {
 }
 
 a:hover {
-  color: #065b83;
+  color: #149669;
   text-decoration: underline;
 }
 
@@ -1015,7 +1015,7 @@ a:hover {
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: #226ab8;
 }
 
 .btn.btn-danger {
