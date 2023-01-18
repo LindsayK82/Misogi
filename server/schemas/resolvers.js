@@ -49,10 +49,10 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addEvent: async (parent, { title, time, description }) => {
+    addEvent: async (parent, { title, description }) => {
       const newEvent = {
         title,
-        time: new Date(time),
+        
         description,
       };
       return Event.create(newEvent);
