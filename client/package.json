@@ -5,7 +5,10 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.6.6",
-    
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,7 +16,7 @@
     "graphql": "^16.5.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.1.0",
-    
+    "react-audio-player": "^0.17.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-responsive-carousel": "^3.2.23",
