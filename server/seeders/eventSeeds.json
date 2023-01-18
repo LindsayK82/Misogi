@@ -1,11 +1,18 @@
 [
     {
-      "eventText": "Event one",
-      "eventType": "convention"
+      "title": "Park Clean Up",
+      "description": "We are cleaining up the local Park"
+      
     },
     {
-      "eventText": "Event Two",
-      "eventType": "Shop"
+      "title": "Ocean Clean Up",
+      "description": "We are cleaning up the Ocean"
+      
+    },
+
+    {
+      "title": "Global Climate Change Awareness",
+      "description": "We are going to discuss how we can help the world"
     }
   ]
   
