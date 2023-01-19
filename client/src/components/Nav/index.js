@@ -17,21 +17,16 @@ const Nav = () => {
                 <div className="row">
                     {Auth.loggedIn() ? (
                         <>
-                            <Link className="btn btn-md btn-info m-2" to="/me">
-                                {Auth.getProfile().data.username}'s profile
-                            </Link>
-                            <button className="btn btn-md btn-light m-2" onClick={logout}>
-                                Logout
-                            </button>
-                            <Link className="text-light" to="/">
+                        <Link className="text-light" to="/">
                                 <img
                                     alt="logo"
                                     src={logoImage}
-                                    width="90"
-                                    height="90"
+                                    width="100"
+                                    height="100"
                                     className="d-inline-block align-top"
                                 />{'    '}
-                            </Link>
+                            </Link>                         
+                            
                             <Link className="btn btn-md btn-light m-5" to="/discover-events">
                                 Events
                             </Link>
@@ -43,13 +38,13 @@ const Nav = () => {
                             </Link>
                             <Link className="btn btn-md btn-light m-5" to="/about-us">
                                 About Us
+                            </Link> 
+                            <Link className="btn btn-md btn-info m-5" to="/me">
+                                {Auth.getProfile().data.username}
                             </Link>
-                            <Link className="btn btn-md btn-info m-5" to="/login">
-                                Login
-                            </Link>
-                            <Link className="btn btn-md btn-light m-5" to="/signup">
-                                Signup
-                            </Link>
+                            <Link className="btn btn-md btn-light m-5" onClick={logout}>
+                                Logout
+                            </Link>                         
 
                         </>
 
