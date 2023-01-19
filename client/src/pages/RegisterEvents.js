@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css';
+import '../pagestyle/register-events.css';
 
 const RegisterEvents = () => {
     const [firstName, setFirstName] = useState('');
