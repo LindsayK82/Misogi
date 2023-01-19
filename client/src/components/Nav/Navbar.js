@@ -1,24 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import SignUpForm from '../register/SignupForm';
-import LoginForm from '../register/LoginForm';
+import logoImage from '../../assets/images/homepage/misogiLogo.png'
 
 import Auth from '../../utils/auth';
-import misogiLogo from '../../assets/images/homepage/misogiLogo.png';
-const AppNavbar = () => {
-  const [showModal, setShowModal] = useState(false);
 
+const NavBar = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
-    <>
-      <Navbar className="light" expand="lg">
-        <Container>
+    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+      <div className="container flex-row justify-space-between-lg justify-center align-center">       
+        <div className ="row">
+          {Auth.loggedIn() ? (
+            <>
+              <Link className="btn btn-md btn-info m-2" to="/me">
+                {Auth.getProfile().data.username}'s profile
+              </Link>
+              <button className="btn btn-md btn-light m-2" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <div>
+          <Link className="text-light" to="/">
           <img
             alt="logo"
-            src={misogiLogo}
-            width="70"
-            height="70"
+            src={logoImage}
+            width="90"
+            height="90"
             className="d-inline-block align-top"
+
             // style={{ marginRight: '2%' }}
           />{'    '}
           <Navbar.Brand as={Link} to="/" className="navbrand">
@@ -91,7 +105,37 @@ const AppNavbar = () => {
         </Tab.Container>
       </Modal>
     </>
+
+           
+          />
+          </Link>          
+        </div>
+              <Link className="btn btn-md btn-light m-5" to="/discover-events">
+                Events
+              </Link>
+              <Link className="btn btn-md btn-light m-5" to="/discover-styles">
+                Styles
+              </Link>
+              <Link className="btn btn-md btn-light m-5" to="/how-its-made">
+                How it's Made
+              </Link>
+              <Link className="btn btn-md btn-light m-5" to="/about-us">
+                About Us
+              </Link>
+              <Link className="btn btn-md btn-info m-5" to="/login">
+                Login
+              </Link>
+              <Link className="btn btn-md btn-light m-5" to="/signup">
+                Signup
+              </Link>              
+            </>
+          )}
+        </div>
+        
+      </div>
+    </header>
+
   );
 };
 
-export default AppNavbar;
+export default NavBar;
