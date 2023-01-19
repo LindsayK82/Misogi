@@ -15,9 +15,8 @@ const typeDefs = gql`
 
   type Event {
     title: String!
-    users: [User]
-    time: String!
 
+    time: String!
     description: String
   }
 
