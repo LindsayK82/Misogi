@@ -44,6 +44,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <Header />
         <div className="flex-column justify-flex-start min-100-vh">
           <Navbar />
           <div className="container">

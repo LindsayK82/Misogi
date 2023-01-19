@@ -18,6 +18,18 @@ const Header = () => {
               <Link className="btn btn-md btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
+              <Link className="btn btn-md btn-light m-2" to="/discover-events">
+                Discover Events
+              </Link>
+              <Link className="btn btn-md btn-light m-2" to="/discover-styles">
+                Discover Styles
+              </Link>
+              <Link className="btn btn-md btn-light m-2" to="/how-its-made">
+                How it's Made
+              </Link>
+              <Link className="btn btn-md btn-light m-2" to="/about-us">
+                About Us
+              </Link>
               <button className="btn btn-md btn-light m-2" onClick={logout}>
                 Logout
               </button>
