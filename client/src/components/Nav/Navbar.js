@@ -23,7 +23,7 @@ const AppNavbar = () => {
           />{'    '}
           <Navbar.Brand as={Link} to="/" className="navbrand">
            Misogi
-          </Navbar.Brand>{'    '}
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             
@@ -38,17 +38,19 @@ const AppNavbar = () => {
             </Nav.Link>{'    '}
             <Nav.Link>
               {Auth.loggedIn() ? (
-                <Nav.Link onClick={Auth.logout} className="navbrand">
+                <Nav.Link onClick={Auth.logout} className="navbrand" to="/">
                   Logout
                 </Nav.Link>
               ) : (
                 <Nav.Link
                   onClick={() => setShowModal(true)}
                   className="navbrand"
+                  to="/login"
                 >
-                  Login/Sign Up
+                  Login
                 </Nav.Link>
               )}{'   '}
+              
             </Nav.Link>{'   '}
           </Navbar.Collapse>
         </Container>

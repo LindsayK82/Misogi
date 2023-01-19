@@ -1,15 +1,15 @@
 
 import React from 'react';
-import TurtleAndOcean from "../assets/images/aboutus/turtleOcean.png"
+import "../pagestyle/aboutus-stylesheet.css"
 
 const AboutUs = () => {
 
     return (
-        <main>
-            <div className='row'>
-                <div className='col-md-6'>
+        <main>        
+
+            <div className='aboutus-container'>
+                <div className='aboutus-card' data-tilt>
                     <h2>About Us</h2>
-                    <br />
                     <p>
                         Misogi is dedicated to raising awareness around plastic pollution in our oceans.
                         Misogi has created a community and a space where artists, leaders, businesses and more can come together to raise awareness about pollution in our oceans, and help drive solutions to the pollution problem. Misogi is working to change consumer behavior and drive consumers toward more sustainable options that can help keep our oceans clean.
@@ -17,12 +17,7 @@ const AboutUs = () => {
                         Misogi through collaboration and driving awareness, we can change the world.
                     </p>
                 </div>
-                <div className='col-md-6'>
-                    <img src={TurtleAndOcean} style={{ width: "100%" }} alt="turtle swimming in ocean with plastic bag" />
-                </div>
             </div>
-            <br />
-            <br />
         </main>
     );
 };
