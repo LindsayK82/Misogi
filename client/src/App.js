@@ -18,7 +18,7 @@ import AboutUs from './pages/AboutUs';
 import DiscoverEvents from './pages/DiscoverEvents';
 import DiscoverStyles from './pages/DiscoverStyles';
 import RegisterEvents from './pages/RegisterEvents';
-import Header from './components/Header';
+
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
