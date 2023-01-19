@@ -8,7 +8,7 @@ const AboutUs = () => {
         <main>        
 
             <div className='aboutus-container'>
-                <div className='aboutus-card' data-tilt>
+                <div className='aboutus-card'>
                     <h2>About Us</h2>
                     <p>
                         Misogi is dedicated to raising awareness around plastic pollution in our oceans.
