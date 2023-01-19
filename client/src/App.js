@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Nav/Navbar';
+import Nav from './components/Nav';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -18,7 +18,6 @@ import AboutUs from './pages/AboutUs';
 import DiscoverEvents from './pages/DiscoverEvents';
 import DiscoverStyles from './pages/DiscoverStyles';
 import RegisterEvents from './pages/RegisterEvents';
-import Header from './components/Header';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -44,9 +43,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
+        <Nav />
         <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar />
           <div className="container">
             <Routes>
               <Route 
