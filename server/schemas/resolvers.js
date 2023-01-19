@@ -1,5 +1,5 @@
 const { signToken } = require('../util/auth');
-const { User, Event } = require('../models');
+const { User, Events } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 
 
@@ -18,14 +18,15 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     events: async () => {
-      return Event.find({}).populate('users');
+      return Events.find();
+
     },
     event: async (parent, { title }) => {
-      return Event.findOne({ title }).populate('users');
+      return Events.findOne({ title });
     },
     getMyEvents: async (parent, args, context) => {
       if (context.user) {
-        return Event.find({ users: context.user._id });
+        return Events.find({ users: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -55,7 +56,7 @@ const resolvers = {
         
         description,
       };
-      return Event.create(newEvent);
+      return Events.create(newEvent);
     },
     deleteMe: async (parent, args, context) => {
       if (context.user) {

@@ -15,7 +15,7 @@ export const QUERY_EVENTS = gql`
     events {
       _id
       title
-      users
+
       time
       description
     }
