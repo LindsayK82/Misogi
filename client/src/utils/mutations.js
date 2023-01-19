@@ -35,6 +35,19 @@ export const ADD_EVENT = gql`
   }
 `;
 
+export const ADD_USER_EVENT = gql`
+  mutation addUserEvent($title: String!, $description: Stirng!) {
+    addUserEvent(title: $title, description: $description) {
+      token
+      user {
+      _id
+      title
+      description
+      }
+    }
+  }
+`;
+
 
   
 

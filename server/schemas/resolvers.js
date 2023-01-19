@@ -1,7 +1,6 @@
-const { signToken } = require('../util/auth');
-const { User, Events } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
-
+const { User, Events } = require('../models');
+const { signToken } = require('../util/auth');
 
 const resolvers = {
   Query: {
@@ -15,7 +14,7 @@ const resolvers = {
       if (context.user) {
         return User.findById({ _id: context.user._id });
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
     events: async () => {
       return Events.find();
@@ -26,9 +25,9 @@ const resolvers = {
     },
     getMyEvents: async (parent, args, context) => {
       if (context.user) {
-        return Events.find({ users: context.user._id });
+        return Events.find({ users: context.username });
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
   },
   Mutation: {
@@ -63,17 +62,17 @@ const resolvers = {
         await User.findByIdAndDelete(context.user._id);
         return 'User deleted';
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
     addMeToEvent: async (parent, { title }, context) => {
       if (context.user) {
-        const event = await Event.findOne({ title }).populate('users');
+        const event = await Events.findOne({ title }).populate('users');
         if (!event) {
           throw new UserInputError('No event of that title found');
         }
         let inEvent = false;
-        event.users.forEach((usr) => {
-          if (usr.username == context.user.username) {
+        event.users.forEach((user) => {
+          if (user.username == context.user.username) {
             inEvent = true;
           }
         });
@@ -82,7 +81,7 @@ const resolvers = {
         }
         return event.save();
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
     removeMeFromEvent: async (parent, { title }, context) => {
       if (context.user) {
@@ -95,7 +94,7 @@ const resolvers = {
         );
         return event.save();
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
   },
 };
