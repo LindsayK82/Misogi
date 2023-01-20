@@ -47,7 +47,7 @@ const Profile = () => {
               </div>
               {!userParam && (
                 <div>
-                  <EventForm />
+                  
                 </div>
               )}
 
