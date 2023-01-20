@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../pagestyle/register-events.css';
+import emailjs from '@emailjs/browser'
+import { FormControl, Form, Button } from 'react-bootstrap'
 
 
-function Form() {
+
+const RegisterEvents = () => {
+
+  const form = useRef();
+  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_651nglq', 'template_4p7maha', form.current, 'utZP25tjcR_kMIURO')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
+  }
+
 
   // const RegisterEvents = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -17,36 +38,27 @@ function Form() {
     const inputValue = target.value
 
 
-    if (inputType === 'firstName') {
-      setFirstName(inputValue);
-    } else if (inputType === 'lastName') {
-      setLastName(inputValue);
-    } else {
+    if (inputType === "email") {
       setEmail(inputValue);
+    } else if (inputType === "userName") {
+      setUserName(inputValue);
+    } else {
+      setMessage(inputValue);
     }
-
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    // return name === 'firstName' ? setFirstName(value) : setLastName(value);
   };
+  // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+  // return name === 'firstName' ? setFirstName(value) : setLastName(value);
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
 
-    // Alert the user their first and last name, clear the inputs
-    alert(`Hello, ${firstName} ${lastName}! You have been registered for this event.`);
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-  };
+  //   alert(`Hello, ${firstName} ${lastName}! You have been registered for this event.`);
+  //   setFirstName('');
+  //   setLastName('');
+  //   setEmail('');
+  // };
 
-  return (
-    <div>
-
-      {/* <p>
-        Hello {firstName} {lastName} we will contact you at {email}
-      </p> */}
-      <form className="form">
+  {/* <form className="form">
         <input
           value={firstName}
           name="firstName"
@@ -74,9 +86,27 @@ function Form() {
       </form>
       <button className="button" type="button" onClick={handleFormSubmit}>
         Submit
-      </button>
+      </button> */}
+
+  return (
+
+    <div className='card'>
+      <div className='form'>
+
+        <Form ref={form} onSubmit={sendEmail}>
+          <label for="contact-name">Name</label>
+          <input type="text" className='form-control' value={userName} onChange={(e) => setUserName(e.target.value)} id="contact-name" placeholder="Your Name" name="user_name" />
+          <label for="contact-email">Email</label>
+          <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} id="contact-email" placeholder='Your Email' name="user_email" />
+          <label for="contact-message">Message</label>
+          <textarea name="message" className='form-control' value={message} onChange={(e) => setMessage(e.target.value)} id="contact-message" placeholder='Your Message' />
+          <input type="submit" className='btn btn-primary' />
+        </Form>
+
+      </div>
     </div>
   )
 }
 
-export default Form;
+export default RegisterEvents;
+
