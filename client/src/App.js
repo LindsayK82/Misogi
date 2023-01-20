@@ -19,6 +19,7 @@ import DiscoverEvents from './pages/DiscoverEvents';
 import DiscoverStyles from './pages/DiscoverStyles';
 import RegisterEvents from './pages/RegisterEvents';
 import Footer from './components/Footer';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

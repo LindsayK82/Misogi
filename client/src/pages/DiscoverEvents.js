@@ -20,7 +20,7 @@ console.log(events)
           ) : (
             <EventList
               events={events}
-              title="Some Feed for Thought(s)..."
+              
             />
           )}
         </div>
