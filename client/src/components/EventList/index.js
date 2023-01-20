@@ -8,7 +8,7 @@ const EventList = ({
   description,
   showTitle = true,
 }) => {
-  if (!events.length) {
+  if (!events) {
     return <h3>No Events Yet</h3>;
   }
 
