@@ -54,13 +54,18 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addEvent: async (parent, { title, description }) => {
-      const newEvent = {
-        title,
-        
-        description,
-      };
-      return Events.create(newEvent);
+    addEvent: async (parent, { title, description }, context) => {
+      if (context.user) {
+       
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { events: event._id } }
+        );
+
+        return event;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     deleteMe: async (parent, args, context) => {
       if (context.user) {
