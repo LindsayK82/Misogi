@@ -6,17 +6,16 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      password
     }
   }
 `;
 
 export const QUERY_EVENTS = gql`
-  query getMyEvents {
+  query getEvents {
     events {
       _id
       title
-
-      time
       description
     }
   }
