@@ -14,9 +14,8 @@ const typeDefs = gql`
   }
 
   type Event {
+    _id: ID!
     title: String!
-
-    time: String!
     description: String
   }
 

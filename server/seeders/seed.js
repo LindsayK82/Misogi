@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User, Event } = require('../models');
+const { User, Events } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const eventSeeds = require('./eventSeeds.json');
 
@@ -8,7 +8,7 @@ db.once('open', async () => {
         await User.deleteMany({});
     
         await User.create(userSeeds);
-        await Event.create(eventSeeds);
+        await Events.create(eventSeeds);
     
       } catch (err) {
         console.error(err);

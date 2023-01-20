@@ -16,8 +16,10 @@ const resolvers = {
       }
       // throw new AuthenticationError('You need to be logged in!');
     },
-    events: async () => {
-      return Events.find();
+    events: async (parent, args) => {
+      const events=await Events.find()
+      console.log(events)
+      return events;
 
     },
     event: async (parent, { title }) => {
