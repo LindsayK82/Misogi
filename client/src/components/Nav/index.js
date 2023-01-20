@@ -21,8 +21,8 @@ const Nav = () => {
                                 <img
                                     alt="logo"
                                     src={logoImage}
-                                    width="100"
-                                    height="100"
+                                    width="80"
+                                    height="80"
                                     className="d-inline-block align-top"
                                 />{'    '}
                             </Link>                         
@@ -30,8 +30,8 @@ const Nav = () => {
                             <Link className="btn btn-md btn-light m-5" to="/discover-events">
                                 Events
                             </Link>
-                            <Link className="btn btn-md btn-light m-5" to="/discover-styles">
-                                Styles
+                            <Link className="btn btn-md btn-light m-5" to="/donate">
+                                Donate
                             </Link>
                             <Link className="btn btn-md btn-light m-5" to="/how-its-made">
                                 How it's Made
@@ -62,8 +62,8 @@ const Nav = () => {
                             <Link className="btn btn-md btn-light m-5" to="/discover-events">
                                 Events
                             </Link>
-                            <Link className="btn btn-md btn-light m-5" to="/discover-styles">
-                                Styles
+                            <Link className="btn btn-md btn-light m-5" to="/donate">
+                                Donate
                             </Link>
                             <Link className="btn btn-md btn-light m-5" to="/how-its-made">
                                 How it's Made

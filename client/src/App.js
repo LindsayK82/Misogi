@@ -16,7 +16,7 @@ import Profile from './pages/Profile';
 import HowItsMade from './pages/HowItsMade';
 import AboutUs from './pages/AboutUs';
 import DiscoverEvents from './pages/DiscoverEvents';
-import DiscoverStyles from './pages/DiscoverStyles';
+import Donate from './pages/Donate';
 import RegisterEvents from './pages/RegisterEvents';
 import Footer from './components/Footer';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -73,8 +73,8 @@ function App() {
                 element={<DiscoverEvents />}
               />
                <Route 
-                path="/discover-styles" 
-                element={<DiscoverStyles />}
+                path="/donate" 
+                element={<Donate />}
               />
               <Route 
                 path="/about-us" 
