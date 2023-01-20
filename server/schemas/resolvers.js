@@ -20,6 +20,9 @@ const resolvers = {
       const events=await Events.find()
       console.log(events)
       return events;
+    // events: async (parent, { username }) => {
+    //   const params = username ? { username } : {};
+    //   return Event.find(params).sort({ createdAt: -1 });
 
     },
     event: async (parent, { title }) => {
