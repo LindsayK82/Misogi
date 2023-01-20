@@ -7,6 +7,11 @@ export const QUERY_USER = gql`
       username
       email
       password
+      events {
+        _id
+        title
+        description
+      }
     }
   }
 `;
