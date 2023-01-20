@@ -8,8 +8,9 @@
   }
   
   .button{
-    background-color: blue;
+    background-color: darkblue;
     color: white;
+    align-self: bottom;
   }
 
   .card {
@@ -18,4 +19,6 @@
     display: flex;
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid;
+    box-shadow: 10px 10px 5px gray;
   }
