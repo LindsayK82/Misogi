@@ -5,8 +5,7 @@ import "../pagestyle/aboutus-stylesheet.css"
 const AboutUs = () => {
 
     return (
-        <main>        
-
+        <main>      
             <div className='aboutus-container'>
                 <div className='aboutus-card'>
                     <h2>About Us</h2>
