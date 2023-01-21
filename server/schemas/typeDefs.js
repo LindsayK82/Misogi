@@ -40,8 +40,6 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addEvent(
       title: String!
-      time: String!
-
       description: String
     ): Event
     deleteMe: String

@@ -37,7 +37,7 @@ const StripeCheckoutButton = ({ price }) => {
       token={onToken}
       stripeKey={publishableKey}
     >
-      <button className="btn">Checkout</button>
+      <button className="btn btn-md bg-danger">Donate</button>
     </StripeCheckout>
     //Test Card: 4242 4242 4242 4242 - Exp: 01/28 - CVV: 123
   );

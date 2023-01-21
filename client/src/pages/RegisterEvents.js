@@ -19,6 +19,7 @@ const RegisterEvents = () => {
     emailjs.sendForm('service_651nglq', 'template_4p7maha', form.current, 'utZP25tjcR_kMIURO')
       .then((result) => {
         console.log(result.text);
+        setEmail("");setUserName("");setMessage("")
       }, (error) => {
         console.log(error.text);
       });
@@ -90,19 +91,19 @@ const RegisterEvents = () => {
 
   return (
 
-    <div className='card'>
-      <div className='form'>
-
-        <Form ref={form} onSubmit={sendEmail}>
-          <label for="contact-name">Name</label>
-          <input type="text" className='form-control' value={userName} onChange={(e) => setUserName(e.target.value)} id="contact-name" placeholder="Your Name" name="user_name" />
-          <label for="contact-email">Email</label>
-          <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} id="contact-email" placeholder='Your Email' name="user_email" />
-          <label for="contact-message">Message</label>
-          <textarea name="message" className='form-control' value={message} onChange={(e) => setMessage(e.target.value)} id="contact-message" placeholder='Your Message' />
-          <input type="submit" className='btn btn-primary' />
-        </Form>
-
+    <div className='registerevents-container'>
+      <div className='registerevents-card'>
+        <div className='form'>
+          <Form ref={form} onSubmit={sendEmail}>
+            <label for="contact-name">Name</label>
+            <input type="text" className='form-control' value={userName} onChange={(e) => setUserName(e.target.value)} id="contact-name" placeholder="Your Name" name="user_name" />
+            <label for="contact-email">Email</label>
+            <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} id="contact-email" placeholder='Your Email' name="user_email" />
+            <label for="contact-message">Message</label>
+            <textarea name="message" className='form-control' value={message} onChange={(e) => setMessage(e.target.value)} id="contact-message" placeholder='Your Message' />
+            <input type="submit" className='btn btn-primary' />
+          </Form>
+        </div>
       </div>
     </div>
   )
