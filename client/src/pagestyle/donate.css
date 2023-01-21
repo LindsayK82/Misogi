@@ -32,10 +32,10 @@
     backdrop-filter: 5px;
 }
 
-.discoverstyles-card img {
+.donateshirtimg img {
+    margin-top: 10%;
     width: 150px;
     border-radius: 10%;
-
 }
 
 .discoverstyles-card h2 {

@@ -48,7 +48,6 @@ export const QUERY_ME = gql`
         _id
         title
         users
-        time 
         description
       }
     }

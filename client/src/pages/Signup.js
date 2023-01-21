@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import "../pagestyle/signup-login.css"
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -40,10 +40,10 @@ const Signup = () => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+      <div className="col-12">
+        <div className="signuplogin-container">
+          <div className="signuplogin-card">
+          <h2 className="card-header p-2">Sign Up</h2>
             {data ? (
               <p>
                 Success! You may now head{' '}

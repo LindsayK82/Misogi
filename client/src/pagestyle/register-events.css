@@ -1,4 +1,4 @@
-.form {
+/* .form {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -21,4 +21,62 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: solid;
     box-shadow: 10px 10px 5px gray;
+  } */
+
+
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 50%;
+    
   }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.registerevents-container{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/registerevents/saveourocean.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerevents-card{
+  width: 100%;
+  max-width: 300px;
+  color:rgb(14, 14, 14);
+  text-align: center;
+  padding: 50px 50px;
+  border: 1px solid rgba(250,250,250,0.3);
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+  backdrop-filter: 5px;
+}
+
+
+.registerevents-card h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+.registerevents-card p {
+  font-size: 15px;
+  margin: 10px auto;
+  max-width: 350px;
+}
+
