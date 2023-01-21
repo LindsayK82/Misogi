@@ -5,7 +5,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import EventList from '../components/EventList';
 import EventForm from '../components/EventForm'
-import "../pagestyle/userprofile.css"
+import "../pagestyle/user-profile.css"
 
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -16,18 +16,15 @@ import Auth from '../utils/auth';
 const Profile = () => {
   const { username: userParam } = useParams();
   const [user, setUser] = useState({})
-
-  // const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-  //   variables: { username: userParam },
-  // });
-
+  
+  
   const { loading, data } = useQuery(userParam ? QUERY_USER :QUERY_ME, {
     variables: { username: userParam }
   })
-
-
-  useEffect(() => {
-    // user = data?.me || data?.user || {};
+  
+  
+  useEffect(() => {    
+    const user = data?.me || data?.user || {};
     console.log(user)
   }, [data])
 
