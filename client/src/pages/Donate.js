@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 // import '../components/Shopping/shopping.css';
+import '../pagestyle/donate.css'
 import StripeCheckoutButton from '../components/Shopping/stripe';
 import PRODUCTS from '../components/Shopping/shopping-items.json';
+import BlackShirt from '../../src/assets/images/discoverstyles/blackshirt.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -102,7 +104,9 @@ function Shopping() {
     cartCountTotal === 0 ? (
       <b style={{ color: '#5B4B8A', fontSize: '28px'}}>
         <div style={{backgroundColor:"white"}}>
-        <p >Support Us by Purchasing our Stuff</p>
+        <p>Support Us by Donating and help us clean up the oceans by rasing awareness!
+        <p>All profits go towards organizations who are on the frontlines fighting for this cause!</p>  
+        </p>
         <p>Cart is empty</p>
         
         </div>
@@ -247,12 +251,12 @@ function Shopping() {
                   <button className="btn" onClick={() => addToCart(i)}>
                     <FontAwesomeIcon icon="fas fa-cart-plus" /> Add To Cart
                   </button>
+                  <div className='donateshirtimg'>
+                  <img src={BlackShirt} />
+                  </div>
                 </>
               ) : (
-                <div>
-                  <p>
-                    Finished
-                  </p>
+                <div>                 
                   <p>
                     <b>Item added!</b>
                   </p>

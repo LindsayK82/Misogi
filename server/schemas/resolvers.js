@@ -12,7 +12,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findById({ _id: context.user._id }).populate('events');
+        return User.findOne({ _id: context.user._id }).populate('events');
       }
       // throw new AuthenticationError('You need to be logged in!');
     },

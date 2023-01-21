@@ -42,7 +42,7 @@ const Nav = () => {
                             <Link className="btn btn-md btn-info m-5" to="/me">
                                 {Auth.getProfile().data.username}
                             </Link>
-                            <Link className="btn btn-md btn-light m-5" onClick={logout}>
+                            <Link className="btn btn-md btn-light m-5" onClick={logout} redirect="/">
                                 Logout
                             </Link>                         
 

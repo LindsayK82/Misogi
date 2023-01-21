@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import "../pagestyle/signup-login.css"
 
 import Auth from '../utils/auth';
 
@@ -42,15 +43,12 @@ const Login = (props) => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
+      <div className="col-12">
+        <div className="signuplogin-container">
+          <div className="signuplogin-card">
+          <h2 className="card-header p-2">Login</h2>
+            {data ? (              
+                <Link to="/" />              
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
