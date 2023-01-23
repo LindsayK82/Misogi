@@ -45,13 +45,10 @@ const Profile = () => {
                 Viewing {userParam ? `${user.username}'s` : 'your'} profile.
               </h2>
 
-              <div className="col-12 col-md-10 mb-5">
-                <EventList
-                  events={user.events}
-                  title={`${user.username}'s events...`}
-                  showTitle={false}
-                  showUsername={false}
-                />
+              <div >
+               <h4>
+                Updates Coming Soon
+               </h4>
               </div>
               {!userParam && (
                 <div>

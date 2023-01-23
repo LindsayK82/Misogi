@@ -55,12 +55,12 @@ function Carousels() {
                         100,000 Animals Die from Entanglement Each Year.
                     </p>
                 </div>
-                <div>
+                {/* <div>
                     <img src={BeTheChange} alt="picture of non-profit log" />
                     <p className="Picture">
                     Make one hard decision today to make tomorrow better.
                     </p>
-                </div>
+                </div> */}
             </Carousel>
         </center>
     )

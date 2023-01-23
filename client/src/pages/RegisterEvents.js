@@ -50,14 +50,14 @@ const RegisterEvents = () => {
   // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
   // return name === 'firstName' ? setFirstName(value) : setLastName(value);
 
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-  //   alert(`Hello, ${firstName} ${lastName}! You have been registered for this event.`);
-  //   setFirstName('');
-  //   setLastName('');
-  //   setEmail('');
-  // };
+    alert(`Hello, ${userName} ${lastName}! You will recieve an email about this event.`);
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+  };
 
   {/* <form className="form">
         <input
@@ -101,7 +101,7 @@ const RegisterEvents = () => {
             <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} id="contact-email" placeholder='Your Email' name="user_email" />
             <label for="contact-message">Message</label>
             <textarea name="message" className='form-control' value={message} onChange={(e) => setMessage(e.target.value)} id="contact-message" placeholder='Your Message' />
-            <input type="submit" className='btn btn-primary' />
+            <input type="submit" className='btn btn-primary' onClick={handleFormSubmit}/>
           </Form>
         </div>
       </div>
