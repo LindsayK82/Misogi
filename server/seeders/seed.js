@@ -6,7 +6,7 @@ const eventSeeds = require('./eventSeeds.json');
 db.once('open', async () => {
     try {
         await User.deleteMany({});
-    
+        await Events.deleteMany({});
         await User.create(userSeeds);
         await Events.create(eventSeeds);
     
