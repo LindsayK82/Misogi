@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../pagestyle/register-events.css';
+import "./index.css"
+import { Card } from "antd"
 
 const EventList = ({
   events,
@@ -12,12 +14,12 @@ const EventList = ({
     return <h4>No Events Registered Yet</h4>;
   }
 
+  
   return (
-    <div style={{ width: '', display: 'flex', flexDirection: 'row' }}>
-      {showTitle && <h3>{title}</h3>}
+    <div className='eventmap'>
       {events &&
         events.map((event) => (
-          <div key={event._id} className="card" style={{ width: '100rem' }}>
+          <Card key={event._id} className="card col-3">
             <div className="card-body">
               {showTitle && <h5 className="card-title">{event.title}</h5>}
               <h6 className="card-subtitle mb-2 text-muted"></h6>
@@ -29,7 +31,7 @@ const EventList = ({
                 <Link to="/register-events">Click here to register.</Link>
               </p>
             </button>
-          </div>
+          </Card>
         ))}
 
     </div>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import logoImage from "../../assets/images/homepage/misogiLogo.png"
 
-
 const Nav = () => {
     const logout = (event) => {
         event.preventDefault();
